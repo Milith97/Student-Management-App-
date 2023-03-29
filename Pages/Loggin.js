@@ -13,7 +13,9 @@ export default function Loggin(navigation) {
 
       <Text style={styles.baseText}>Log in</Text>
 
-      <Text style={styles.mail}>Email</Text>
+      <View>
+        <Text style={styles.mail}>Email</Text>
+      </View>
 
       <View style={styles.input1}>
         <TextInput
@@ -21,11 +23,13 @@ export default function Loggin(navigation) {
           onChangeText={text => setText(text)}
           mode="Flat"
           backgroundColor="#FFFFFF"
-           
+
         />
       </View>
 
-      <Text style={styles.psw}>Password</Text>
+      <View>
+        <Text style={styles.psw}>Password</Text>
+      </View>
 
       <View style={styles.input2}>
         <TextInput
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
     marginLeft: '5%',
     width: 300,
     marginTop: '5%',
-   
+
 
   },
   input2: {
