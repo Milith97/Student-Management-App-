@@ -21,8 +21,7 @@ export default function Loggin(navigation) {
           onChangeText={text => setText(text)}
           mode="Flat"
           backgroundColor="#FFFFFF"
-
-
+          
         />
       </View>
 
@@ -62,8 +61,11 @@ const styles = StyleSheet.create({
     color: '#3F3E4C'
   },
   input1: {
-
+    marginLeft: '5%',
+    width: 300,
     marginTop: '5%',
+   
+
   },
   input2: {
 
@@ -72,14 +74,14 @@ const styles = StyleSheet.create({
   mail: {
 
     marginLeft: '5%',
-    marginTop:'10%',
+    marginTop: '1%',
     marginBottom: '1%',
     color: '#D1D0D1'
   },
-  psw:{
+  psw: {
     marginLeft: '5%',
-    marginTop:'2%',
-    marginBottom: '1%',
+    marginTop: '2%',
+    marginBottom: '0sss%',
     color: '#D1D0D1'
   }
 
