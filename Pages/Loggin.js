@@ -21,7 +21,7 @@ export default function Loggin(navigation) {
           onChangeText={text => setText(text)}
           mode="Flat"
           backgroundColor="#FFFFFF"
-          
+           
         />
       </View>
 
