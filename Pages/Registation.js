@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { TextInput } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 
-export default function Registation(navigation) {
+export default function Registation({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
 
@@ -46,9 +47,11 @@ export default function Registation(navigation) {
           backgroundColor='#ffffff'
         />
 
-        <TouchableOpacity style={styles.btn} >
-          <Text style={{ fontSize: 22, color: '#E3E4E4', textAlign: 'center', fontWeight: 'bold' }}>Register Now</Text>
-        </TouchableOpacity>
+        <Button mode="contained" onPress={() => { navigation.navigate('StuMangement') }} style={styles.btn}>
+          Log In
+        </Button>
+
+
 
         <Text style={{ textAlign: 'center', marginTop: '2%' }}>Already Have An Account ? Sign In</Text>
 
@@ -80,12 +83,13 @@ const styles = StyleSheet.create({
   btn: {
     alignItems: 'center',
     backgroundColor: '#007DFE',
-    padding: 10,
+    padding: 7,
     fontWeight: 'bold',
     borderRadius: 30,
     width: 250,
     marginLeft: '10%',
-    marginTop: '5%'
+    marginTop: '5%',
+    fontSize: 10,
 
 
   }

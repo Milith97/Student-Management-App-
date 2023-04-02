@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-paper';
 
 
 
-export default function Loggin(navigation) {
+export default function Loggin({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -43,7 +43,7 @@ export default function Loggin(navigation) {
         </View>
 
         <View style={{ flex: 1, justifyContent: 'center', marginTop:'20%' }}>
-          <TouchableOpacity style={styles.btn} >
+          <TouchableOpacity  onPress={() => {navigation.navigate('StuMangement')}} style={styles.btn} >
             <Text style={{ fontSize: 20, color: '#E3E4E4', textAlign: 'center', fontWeight: 'bold' }}>Login Now</Text>
           </TouchableOpacity>
 
