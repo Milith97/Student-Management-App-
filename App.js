@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { View, Text } from 'react-native'
 import React from 'react'
 import Loggin from './Pages/Loggin';
@@ -20,5 +21,7 @@ export default function App() {
         <Stack.Screen name="StuMangement" component={StuMangement} />
       </Stack.Navigator>
     </NavigationContainer>
+
+
   )
 }
