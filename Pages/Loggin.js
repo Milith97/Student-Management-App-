@@ -73,6 +73,9 @@ export default function Loggin({navigation}) {
 
 
 
+
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

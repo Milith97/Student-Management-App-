@@ -1,11 +1,18 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function StudentDetail() {
+export default function StudentDetail({ navigation }) {
   return (
     <View>
-      <Text>StudentDetail</Text>
+      <Text>Student</Text>
+      <Text>Detail</Text>
     </View>
 
+    
+
   )
+
+ 
+  
+
 }

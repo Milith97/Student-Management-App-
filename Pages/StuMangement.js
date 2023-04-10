@@ -10,14 +10,10 @@ export default function StuMangement({ navigation }) {
 
             <View>
                 <ImageBackground style={styles.backgroundImg} source={require('../assets/StuManag.jpg')}></ImageBackground>
-                 <ImageBackground style={styles.backgroundImg2} source={require('../assets/StuMana2.png')}></ImageBackground>
+                <ImageBackground style={styles.backgroundImg2} source={require('../assets/StuMana2.png')}></ImageBackground>
             </View>
 
-
-
-
-
-            <View style={{ flex: 1, flexDirection: 'column',marginTop:'-105%'}}>
+            <View style={{ flex: 1, flexDirection: 'column', marginTop: '-105%' }}>
                 <View style={styles.Text}>
                     <Text style={{ fontSize: 40, fontWeight: 'bold', marginLeft: '7%', color: '#000000', }}>Student</Text>
                     <Text style={{ fontSize: 30, fontWeight: 'bold', marginLeft: '7%', color: '#000000', }}>Managment</Text>
@@ -26,12 +22,12 @@ export default function StuMangement({ navigation }) {
 
 
 
-            <View style={{ flex: 3, flexDirection: 'column',}}>
-          
+            <View style={{ flex: 3, flexDirection: 'column', }}>
+
                 <View style={{ flex: 1, flexDirection: 'row', }}>
-             
+
                     <View style={{ flex: 1, marginLeft: '5%' }}>
-                        <TouchableOpacity style={styles.btn1} >
+                        <TouchableOpacity style={styles.btn1} onPress={() => { navigation.navigate('StudentDetail') }} >
                             <Text style={styles.btnText}>View</Text>
                             <Text style={styles.btnText}>  Profile </Text>
                         </TouchableOpacity>
@@ -66,7 +62,7 @@ export default function StuMangement({ navigation }) {
 
                 </View>
 
-                
+
             </View>
 
         </ScrollView>

@@ -30,11 +30,15 @@ export default function Home({ navigation }) {
 </Button>
 
 
+
+
 </SafeAreaView>
 
 
   )
 }
+
+
 const styles = StyleSheet.create({
 
   container: {
