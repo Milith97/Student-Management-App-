@@ -47,14 +47,14 @@ export default function StuMangement({ navigation }) {
 
                     <View style={{ flex: 1, marginLeft: '5%' }}>
                         <TouchableOpacity style={styles.btn2} >
-                            <Text style={styles.btnText}>View</Text>
-                            <Text style={styles.btnText}>  Profile </Text>
+                            <Text style={styles.btnText}>Update</Text>
+                            <Text style={styles.btnText}>  Details </Text>
                         </TouchableOpacity>
                     </View>
 
-                    <View style={{ flex: 1, marginRight: '7%' }}>
-                        <TouchableOpacity style={styles.btn2}>
-                            <Text style={styles.btnText}>Delete</Text>
+                    <View style={{ flex: 1, marginRight: '7%'  }}>
+                        <TouchableOpacity style={styles.btn2} onPress={() => { navigation.navigate('AddNewStu') }}  >
+                            <Text style={styles.btnText}>Add New</Text>
                             <Text style={styles.btnText}>Student</Text>
                         </TouchableOpacity>
                     </View>
