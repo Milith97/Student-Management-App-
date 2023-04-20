@@ -1,7 +1,8 @@
-import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, ImageBackground, StyleSheet, } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { TextInput } from 'react-native-paper';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export default function ({ navigation }) {
@@ -18,13 +19,23 @@ export default function ({ navigation }) {
                 <Text style={styles.baseText}>Student</Text>
             </View>
 
+
+
             <View style={{ flex: 3, flexDirection: 'column', width: 300, marginLeft: '8%', marginTop: '10%', color: '#D9D9D9', }}>
+
+                <View style={{ marginLeft:'-8%' }}>
+                    <ImageBackground style={styles.Img4} source={require('../assets/addnewback4.png')}></ImageBackground>
+                </View>
+
                 <TextInput
                     style={{ height: 45, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Name"
                     backgroundColor='#D9D9D9'
                 />
+                <View style={{ marginLeft: '94%', }}>
+                    <ImageBackground style={styles.Img3} source={require('../assets/addnewback3.png')}></ImageBackground>
+                </View>
                 <TextInput
                     style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
@@ -37,12 +48,20 @@ export default function ({ navigation }) {
                     placeholder="Birth Of Day"
                     backgroundColor='#D9D9D9'
                 />
+                <View style={{ marginLeft: '85%', }}>
+                    <ImageBackground style={styles.Img2} source={require('../assets/addnewback2.png')}></ImageBackground>
+                </View>
+
                 <TextInput
                     style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Email"
                     backgroundColor='#D9D9D9'
                 />
+                <View style={{ marginLeft: '-12%' }}>
+                    <ImageBackground style={styles.Img} source={require('../assets/addnewback1.png')}></ImageBackground>
+                </View>
+
                 <TextInput
                     style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
@@ -51,13 +70,12 @@ export default function ({ navigation }) {
                     right={<TextInput.Icon iconsss="eye" />}
                 />
 
-                <TouchableOpacity style={styles.btn} >
-                    <Text style={{ fontSize: 17, color: '#FFFFFF', textAlign: 'center', fontWeight: 'bold' }}>ADD NEW STUDENT</Text>
+
+                <TouchableOpacity style={styles.btn}>
+                    <Text style={{ fontSize: 17, color: '#ffffff', textAlign: 'center', fontWeight: 'bold', margin: '4%' }}>ADD NEW STUDENT</Text>
                 </TouchableOpacity>
 
-
             </View>
-
 
 
 
@@ -94,11 +112,41 @@ const styles = StyleSheet.create({
     },
     btn: {
 
-        padding: 7,
+        backgroundColor: '#007DFE',
+        padding: 6,
         borderRadius: 30,
         width: 225,
         marginLeft: '13%',
-        marginTop: '-20%',
+        marginTop: '8%'
+
+    },
+    Img: {
+        flex: 1,
+        flexDirection: 'column',
+        height: 120,
+        width: 100,
+
+    },
+    Img2: {
+        flex: 1,
+        flexDirection: 'column',
+        height: 90,
+        width: 80,
+
+    },
+    Img3: {
+        flex: 1,
+        flexDirection: 'column',
+        height: 55,
+        width: 38,
+
+    },
+    Img4: {
+        flex: 1,
+        flexDirection: 'column',
+        height: 42,
+        width: 32,
+
     },
 
 
