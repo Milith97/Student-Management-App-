@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-paper';
 
 
 
-export default function Loggin({navigation}) {
+export default function Loggin({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -42,15 +42,15 @@ export default function Loggin({navigation}) {
           />
         </View>
 
-        <View style={{ flex: 1, justifyContent: 'center', marginTop:'20%' }}>
-          <TouchableOpacity  onPress={() => {navigation.navigate('StuMangement')}} style={styles.btn} >
+        <View style={{ flex: 1, justifyContent: 'center', marginTop: '20%' }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('StuMangement') }} style={styles.btn} >
             <Text style={{ fontSize: 20, color: '#E3E4E4', textAlign: 'center', fontWeight: 'bold' }}>Login Now</Text>
           </TouchableOpacity>
 
           <Text style={{ textAlign: 'center', marginTop: '3%' }}>Forget Password</Text>
         </View>
 
-        <View style={{ flex: 1, flexDirection: 'row',marginTop:'10%', marginLeft:'39%' }}>
+        <View style={{ flex: 1, flexDirection: 'row', marginTop: '10%', marginLeft: '39%' }}>
           <Image style={{ width: 25, height: 25 }} source={require('../assets/facebook.png')} />
           <Image style={{ width: 25, height: 25 }} source={require('../assets/google.png')} />
           <Image style={{ width: 25, height: 25 }} source={require('../assets/linkedin.png')} />

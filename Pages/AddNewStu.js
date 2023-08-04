@@ -28,7 +28,7 @@ export default function ({ navigation }) {
                 </View>
 
                 <TextInput
-                    style={{ height: 45, }}
+                    style={{ height: 60, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Name"
                     backgroundColor='#D9D9D9'
@@ -37,13 +37,13 @@ export default function ({ navigation }) {
                     <ImageBackground style={styles.Img3} source={require('../assets/addnewback3.png')}></ImageBackground>
                 </View>
                 <TextInput
-                    style={{ height: 50, }}
+                    style={{ height: 60, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Location"
                     backgroundColor='#D9D9D9'
                 />
                 <TextInput
-                    style={{ height: 50, }}
+                    style={{ height: 60, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Birth Of Day"
                     backgroundColor='#D9D9D9'
@@ -53,7 +53,7 @@ export default function ({ navigation }) {
                 </View>
 
                 <TextInput
-                    style={{ height: 50, }}
+                    style={{ height: 60, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Email"
                     backgroundColor='#D9D9D9'
@@ -63,7 +63,7 @@ export default function ({ navigation }) {
                 </View>
 
                 <TextInput
-                    style={{ height: 50, }}
+                    style={{ height: 60, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Password"
                     backgroundColor='#D9D9D9'
@@ -71,8 +71,8 @@ export default function ({ navigation }) {
                 />
 
 
-                <TouchableOpacity style={styles.btn}>
-                    <Text style={{ fontSize: 17, color: '#ffffff', textAlign: 'center', fontWeight: 'bold', margin: '4%' }}>ADD NEW STUDENT</Text>
+                <TouchableOpacity onPress={() => { navigation.navigate('SuccFullyReg') }} style={styles.btn}>
+                    <Text style={{ fontSize: 15, color: '#ffffff', textAlign: 'center', fontWeight: 'bold', margin: '4%' }}>ADD NEW STUDENT</Text>
                 </TouchableOpacity>
 
             </View>
@@ -92,15 +92,15 @@ const styles = StyleSheet.create({
     backgroundImg: {
         flex: 1,
         flexDirection: 'column',
-        width: 280,
-        height: 200,
+        width: 270,
+        height: 182,
         marginLeft: '25%',
 
     },
     hedText: {
         flex: 1,
         flexDirection: 'column',
-        marginTop: '15%',
+        marginTop: '8%',
         marginLeft: '10%',
     },
 
@@ -113,11 +113,11 @@ const styles = StyleSheet.create({
     btn: {
 
         backgroundColor: '#007DFE',
-        padding: 6,
+        padding: 5,
         borderRadius: 30,
         width: 225,
         marginLeft: '13%',
-        marginTop: '8%'
+        marginTop: '4%'
 
     },
     Img: {

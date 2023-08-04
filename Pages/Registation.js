@@ -16,7 +16,7 @@ export default function Registation({ navigation }) {
 
       <View style={{ flex: 1, flexDirection: 'column', width: 300, marginLeft: '6%', marginTop: '43%', }}>
         <TextInput
-          style={{ borderColor: '#D1D0D1', height: 45, }}
+          style={{ borderColor: '#D1D0D1', height: 45, }} 
           placeholderTextColor={'#AAA7A9'}
           placeholder="Name"
           backgroundColor='#ffffff'

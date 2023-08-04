@@ -1,43 +1,38 @@
-import { View, Text,StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from 'react-native-paper';
 
 
-
 export default function Home({ navigation }) {
   return (
 
-<SafeAreaView style={[styles.container, { flexDirection: 'column' }]}>
+    <SafeAreaView style={[styles.container, { flexDirection: 'column' }]}>
 
-<Text style={styles.baseText}>Hello ! Welcome To</Text>
-<Text style={styles.innerText}>ACPT</Text>
+      <Text style={styles.baseText}>Hello ! Welcome To</Text>
+      <Text style={styles.innerText}>ACPT</Text>
 
-<View>
-  <ImageBackground style={styles.backgroundImg} source={require('./assets/img.jpg')}>
-  </ImageBackground>
+      <View>
+        <ImageBackground style={styles.backgroundImg} source={require('./assets/img.jpg')}>
+        </ImageBackground>
 
-  <ImageBackground style={styles.backgroundImg2} source={require('./assets/img2.jpg')}>
-  </ImageBackground>
-</View>
+        <ImageBackground style={styles.backgroundImg2} source={require('./assets/img2.jpg')}>
+        </ImageBackground>
+      </View>
 
-<Button  mode="contained" onPress={() => {navigation.navigate('Loggin')}} style={styles.btn}>
-  Log In
-</Button>
+      <Button mode="contained" onPress={() => { navigation.navigate('Loggin') }} style={styles.btn}>
+        Log In
+      </Button>
 
-<Button mode="contained" onPress={() => {navigation.navigate('Registation')}} style={styles.btn2}>
-  Register
-</Button>
+      <Button mode="contained" onPress={() => { navigation.navigate('Registation') }} style={styles.btn2}>
+        Register
+      </Button>
 
-
-
-
-</SafeAreaView>
+    </SafeAreaView>
 
 
   )
 }
-
 
 const styles = StyleSheet.create({
 
@@ -46,7 +41,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   baseText: {
-    fontSize: 50
+    fontSize: 60
   },
   innerText: {
     marginTop: '0%',
@@ -70,7 +65,7 @@ const styles = StyleSheet.create({
   btn: {
     height: 50,
     width: 150,
-    marginTop: '5%',
+    marginTop: '0%',
     borderRadius: 4,
 
   },
@@ -79,7 +74,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 150,
     borderRadius: 4,
-    marginTop: '-16%',
+    marginTop: '-14%',
 
   }
 })

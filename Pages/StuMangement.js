@@ -1,8 +1,10 @@
 import { View, Text, ImageBackground, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
+const Drawer = createDrawerNavigator();
 
 export default function StuMangement({ navigation }) {
     return (
