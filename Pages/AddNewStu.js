@@ -20,8 +20,7 @@ export default function ({ navigation }) {
             </View>
 
 
-
-            <View style={{ flex: 3, flexDirection: 'column', width: 300, marginLeft: '8%', marginTop: '10%', color: '#D9D9D9', }}>
+<View style={{ flex: 3, flexDirection: 'column', width: 300, marginLeft: '8%', marginTop: '10%', color: '#D9D9D9', }}>
 
                 <View style={{ marginLeft:'-8%' }}>
                     <ImageBackground style={styles.Img4} source={require('../assets/addnewback4.png')}></ImageBackground>
