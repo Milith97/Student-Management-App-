@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Dimensions, StatusBar,TouchableOpacity } from 'react-native'
+ import { View, Text, StyleSheet, Dimensions, StatusBar,TouchableOpacity } from 'react-native'
 import React from 'react'
 import Onboarding from 'react-native-onboarding-swiper';
 import LottieView from "lottie-react-native";
@@ -24,7 +24,7 @@ export default function OnBoardingScreen() {
   }
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor='#fff' />
+      <StatusBar backgroundColor='#fbfbfc' />
       <Onboarding
        onDone={handleDone}
        onSkip={handleDone}
@@ -83,4 +83,4 @@ const styles = StyleSheet.create({
 }
 
 
-})
+}) 

@@ -1,17 +1,22 @@
 import { View, Text, ImageBackground, StyleSheet, } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-
 export default function ({ navigation }) {
-    return (
-        <SafeAreaView style={styles.container}>
 
-            <View>
-                <ImageBackground style={styles.backgroundImg} source={require('../assets/Addnewstu.png')}></ImageBackground>
-            </View>
+    const [id, setId] = useState('')
+    const [name, setName] = useState('')
+    const [address, setaddress] = useState('')
+    const [birthofddate, setBirthOfDate] = useState('')
+    const [email, setEmail] = useState('')
+    
+
+    return (
+        <View style={styles.container}>
+
+            <ImageBackground style={styles.backgroundImg} source={require('../assets/addnewstu1.png')}>
+            </ImageBackground >
 
             <View style={styles.hedText}>
                 <Text style={styles.baseText}>ADD</Text>
@@ -19,56 +24,64 @@ export default function ({ navigation }) {
                 <Text style={styles.baseText}>Student</Text>
             </View>
 
+            <View style={{ flex: 1, flexDirection: 'column', width: 300, marginLeft: '13%', color: '#D9D9D9', marginBottom: '8%' }}>
 
-<View style={{ flex: 3, flexDirection: 'column', width: 300, marginLeft: '8%', marginTop: '10%', color: '#D9D9D9', }}>
-
-                <View style={{ marginLeft:'-8%' }}>
+                <View style={{}}>
                     <ImageBackground style={styles.Img4} source={require('../assets/addnewback4.png')}></ImageBackground>
                 </View>
 
                 <TextInput
-                    style={{ height: 60, }}
+                    style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Name"
                     backgroundColor='#D9D9D9'
+                    value='Id'
+                    onChangeText={x => setId(x)}
                 />
                 <View style={{ marginLeft: '94%', }}>
                     <ImageBackground style={styles.Img3} source={require('../assets/addnewback3.png')}></ImageBackground>
                 </View>
                 <TextInput
-                    style={{ height: 60, }}
+                    style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
-                    placeholder="Location"
+                    placeholder="Address"
                     backgroundColor='#D9D9D9'
+                    value='Name'
+                    onChangeText={x =>setName(x)}
                 />
                 <TextInput
-                    style={{ height: 60, }}
+                    style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Birth Of Day"
                     backgroundColor='#D9D9D9'
+                    value='Address'
+                    onChangeText={x =>setaddress(x)}
                 />
                 <View style={{ marginLeft: '85%', }}>
                     <ImageBackground style={styles.Img2} source={require('../assets/addnewback2.png')}></ImageBackground>
                 </View>
 
                 <TextInput
-                    style={{ height: 60, }}
+                    style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Email"
                     backgroundColor='#D9D9D9'
+                    value='DOB'
+                    onChangeText={x =>setBirthOfDate(x)}
                 />
-                <View style={{ marginLeft: '-12%' }}>
+                <View style={{}}>
                     <ImageBackground style={styles.Img} source={require('../assets/addnewback1.png')}></ImageBackground>
                 </View>
 
                 <TextInput
-                    style={{ height: 60, }}
+                    style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
-                    placeholder="Password"
+                    placeholder="Email"
                     backgroundColor='#D9D9D9'
                     right={<TextInput.Icon iconsss="eye" />}
+                    value='email'
+                    onChangeText={x =>setEmail(x)}
                 />
-
 
                 <TouchableOpacity onPress={() => { navigation.navigate('SuccFullyReg') }} style={styles.btn}>
                     <Text style={{ fontSize: 15, color: '#ffffff', textAlign: 'center', fontWeight: 'bold', margin: '4%' }}>ADD NEW STUDENT</Text>
@@ -76,9 +89,8 @@ export default function ({ navigation }) {
 
             </View>
 
+        </View>
 
-
-        </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({
@@ -90,17 +102,13 @@ const styles = StyleSheet.create({
 
     backgroundImg: {
         flex: 1,
-        flexDirection: 'column',
-        width: 270,
-        height: 182,
-        marginLeft: '25%',
-
+        marginLeft: '20%'
     },
     hedText: {
-        flex: 1,
-        flexDirection: 'column',
-        marginTop: '8%',
-        marginLeft: '10%',
+        marginTop: '33%',
+        position: 'absolute',
+        marginLeft: '4%',
+
     },
 
     baseText: {

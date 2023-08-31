@@ -1,80 +1,61 @@
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from 'react-native-paper';
-
+import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Home({ navigation }) {
   return (
 
-    <SafeAreaView style={[styles.container, { flexDirection: 'column' }]}>
+    <ImageBackground source={require('./assets/img.jpg')} style={{ flex: 1, backgroundColor: '#ffffff', }}>
 
-      <Text style={styles.baseText}>Hello ! Welcome To</Text>
+      <Text style={styles.baseText}>Hello !</Text>
+      <Text style={styles.baseText}>Welcome To</Text>
       <Text style={styles.innerText}>ACPT</Text>
 
-      <View>
-        <ImageBackground style={styles.backgroundImg} source={require('./assets/img.jpg')}>
-        </ImageBackground>
 
-        <ImageBackground style={styles.backgroundImg2} source={require('./assets/img2.jpg')}>
-        </ImageBackground>
+      <View style={{ flex: 1, flexDirection: 'row', marginLeft: '10%', gap: 20, marginTop: '90%' }} >
+        <TouchableOpacity onPress={() => { navigation.navigate('Loggin') }} style={styles.btn1}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#E3E4E4', textAlign: 'center', marginTop: '5%' }}>Log In</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => { navigation.navigate('Registation') }} style={styles.btn2}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#E3E4E4', textAlign: 'center', marginTop: '5%' }}>Register</Text>
+        </TouchableOpacity>
+
+
       </View>
 
-      <Button mode="contained" onPress={() => { navigation.navigate('Loggin') }} style={styles.btn}>
-        Log In
-      </Button>
 
-      <Button mode="contained" onPress={() => { navigation.navigate('Registation') }} style={styles.btn2}>
-        Register
-      </Button>
 
-    </SafeAreaView>
-
+    </ImageBackground>
 
   )
 }
 
 const styles = StyleSheet.create({
-
-  container: {
-    flex: 1,
-    padding: 20,
-  },
   baseText: {
-    fontSize: 60
+    fontSize: 30,
+    marginLeft: '3%',
+    color: '#000000'
   },
   innerText: {
-    marginTop: '0%',
-    fontSize: 50,
-    fontWeight: 'bold'
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginLeft: '3%'
   },
-  backgroundImg: {
-    flex: 1,
-    justifyContent: 'center',
-    height: 250,
-
-  },
-  backgroundImg2: {
-    flex: 1,
-    justifyContent: 'center',
-    height: 200,
-    width: 200,
-    marginTop: '80%',
-  },
-
-  btn: {
-    height: 50,
+  btn1: {
     width: 150,
-    marginTop: '0%',
-    borderRadius: 4,
-
+    height: 50,
+    backgroundColor: '#007DFE',
+    borderRadius: 10,
   },
   btn2: {
-    marginLeft: '55%',
-    height: 50,
     width: 150,
-    borderRadius: 4,
-    marginTop: '-14%',
+    height: 50,
+    backgroundColor: '#007DFE',
+    borderRadius: 10,
+  },
 
-  }
+
 })
