@@ -25,7 +25,7 @@ export default function StuMangement({ navigation }) {
                     </View>
 
                     <View>
-                        <TouchableOpacity style={styles.btn1}>
+                        <TouchableOpacity style={styles.btn1} onPress={() => { navigation.navigate('DeleteStudent') }}>
                             <Text style={styles.btnText}>Delete</Text>
                             <Text style={styles.btnText}>Student</Text>
                         </TouchableOpacity>
@@ -35,7 +35,7 @@ export default function StuMangement({ navigation }) {
                 <View style={{ flex: 1, flexDirection: 'row', }}>
 
                     <View style={{ marginLeft: '5%' }}>
-                        <TouchableOpacity style={styles.btn2} >
+                        <TouchableOpacity style={styles.btn2} onPress={() => { navigation.navigate('UpdateStudent') }}  >
                             <Text style={styles.btnText}>Update</Text>
                             <Text style={styles.btnText}>  Details </Text>
                         </TouchableOpacity>

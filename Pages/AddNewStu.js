@@ -3,14 +3,32 @@ import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function ({ navigation }) {
+export default function AddNewStu () {
 
     const [id, setId] = useState('')
     const [name, setName] = useState('')
     const [address, setaddress] = useState('')
-    const [birthofddate, setBirthOfDate] = useState('')
+    const [dob, setDob] = useState('')
     const [email, setEmail] = useState('')
-    
+
+    const AddStudent = () => {
+        fetch('http://192.168.1.164:3000/api/v1/student', {
+            method: 'POST',
+            body: JSON.stringify({
+                id: id,
+                name: name,
+                address:  address,
+                dob: dob,
+                email: email
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json))
+            .catch((error)=> console.log(error));
+    }
 
     return (
         <View style={styles.container}>
@@ -33,29 +51,30 @@ export default function ({ navigation }) {
                 <TextInput
                     style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
-                    placeholder="Name"
+                    placeholder="Id"
                     backgroundColor='#D9D9D9'
-                    value='Id'
+                    value={id}
                     onChangeText={x => setId(x)}
                 />
                 <View style={{ marginLeft: '94%', }}>
                     <ImageBackground style={styles.Img3} source={require('../assets/addnewback3.png')}></ImageBackground>
                 </View>
+
+                <TextInput
+                    style={{ height: 50, }}
+                    placeholderTextColor={'#ffffff'}
+                    placeholder="Name"
+                    backgroundColor='#D9D9D9'
+                    value={name}
+                    onChangeText={x => setName(x)}
+                />
                 <TextInput
                     style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
                     placeholder="Address"
                     backgroundColor='#D9D9D9'
-                    value='Name'
-                    onChangeText={x =>setName(x)}
-                />
-                <TextInput
-                    style={{ height: 50, }}
-                    placeholderTextColor={'#ffffff'}
-                    placeholder="Birth Of Day"
-                    backgroundColor='#D9D9D9'
-                    value='Address'
-                    onChangeText={x =>setaddress(x)}
+                    value={address}
+                    onChangeText={x => setaddress(x)}
                 />
                 <View style={{ marginLeft: '85%', }}>
                     <ImageBackground style={styles.Img2} source={require('../assets/addnewback2.png')}></ImageBackground>
@@ -64,10 +83,10 @@ export default function ({ navigation }) {
                 <TextInput
                     style={{ height: 50, }}
                     placeholderTextColor={'#ffffff'}
-                    placeholder="Email"
+                    placeholder="DOB"
                     backgroundColor='#D9D9D9'
-                    value='DOB'
-                    onChangeText={x =>setBirthOfDate(x)}
+                    value={dob}
+                    onChangeText={x => setDob(x)}
                 />
                 <View style={{}}>
                     <ImageBackground style={styles.Img} source={require('../assets/addnewback1.png')}></ImageBackground>
@@ -79,11 +98,11 @@ export default function ({ navigation }) {
                     placeholder="Email"
                     backgroundColor='#D9D9D9'
                     right={<TextInput.Icon iconsss="eye" />}
-                    value='email'
-                    onChangeText={x =>setEmail(x)}
+                    value={email}
+                    onChangeText={x => setEmail(x)}
                 />
 
-                <TouchableOpacity onPress={() => { navigation.navigate('SuccFullyReg') }} style={styles.btn}>
+                <TouchableOpacity onPress={AddStudent} style={styles.btn}>
                     <Text style={{ fontSize: 15, color: '#ffffff', textAlign: 'center', fontWeight: 'bold', margin: '4%' }}>ADD NEW STUDENT</Text>
                 </TouchableOpacity>
 
