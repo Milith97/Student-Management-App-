@@ -1,8 +1,8 @@
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, data } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, } from 'react-native'
 import React, { useState, useEffect } from 'react';
 import { Swipeable } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/dist/FontAwesome5';
-import Icon2 from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { Card } from 'react-native-paper';
 
@@ -20,12 +20,12 @@ export default function DeleteStudent() {
 
     const DeleteData = (id) => {
 
-        fetch('http://192.168.1.164:3000/api/v1/student/'+id, {
+        fetch('http://192.168.1.164:3000/api/v1/student/' + id, {
             method: 'DELETE',
         }).then((response) => response.json())
             .then((json) => {
                 GetData()
-            }).catch((err)=>console.log("=========",err))
+            }).catch((err) => console.log("=========", err))
     }
 
     useEffect(() => {
@@ -35,6 +35,9 @@ export default function DeleteStudent() {
     }, [])
     return (
         <View style={styles.container}>
+            <View>
+                <Text style={{ fontSize: 40, fontFamily: 'PTSerif_Bold', marginLeft: '12%', color: '#000000', }}>Delete Student</Text>
+            </View>
             <FlatList
                 data={data}
                 keyExtractor={(item) => item.id}
